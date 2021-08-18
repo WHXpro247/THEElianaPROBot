@@ -14,28 +14,30 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 123456  # integer value, dont use ""
-    API_HASH = "awoo"
-    TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 797768146  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "HEROGAMERS1" 
-    SUPPORT_CHAT = "AwesomeSupport"  # Your own group for support, do not add the @
+    API_ID = 7284929  # integer value, dont use ""
+    API_HASH = "c69b39a9cff8c485a00d1a7a0d81853f"
+    TOKEN = "1989297177:AAGMV9ajivUxXbV0_KTPwhsrZzctpgNR0ms"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    OWNER_ID = 1840378738  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "Eliana2020Eliana" 
+    BOT_ID = 1989297177
+    SUPPORT_CHAT = "TEP_Discussion"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001392103597
+        -1001350838747
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001392103597
+        -1001504119947
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
+    MONGO_DB_URI = "mongodb+srv://hero9711:hero9711@cluster0.isykk.mongodb.net/test?retryWrites=true&w=majority"
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
     INFOPIC = True
     URL = None
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
-    SPAMWATCH_SUPPORT_CHAT = "SpamWatchSupport"
+    SPAMWATCH_SUPPORT_CHAT = "TEP_Discussion"
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
