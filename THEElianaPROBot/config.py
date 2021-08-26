@@ -5,7 +5,7 @@ from os import getenv
 
 
 def get_user_list(config, key):
-    with open("{}/LaylaRobot/{}".format(os.getcwd(), config), "r") as json_file:
+    with open("{}/THEElianaPROBot/{}".format(os.getcwd(), config), "r") as json_file:
         return json.load(json_file)[key]
 
 
