@@ -75,8 +75,6 @@ if ENV:
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
-    VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
@@ -89,11 +87,8 @@ if ENV:
     AI_API_KEY = os.environ.get("AI_API_KEY", None)
     WALL_API = os.environ.get("WALL_API", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
-    SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
-
-    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-
+    SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
     except ValueError:
@@ -111,7 +106,6 @@ else:
 
     JOIN_LOGGER = Config.JOIN_LOGGER
     OWNER_USERNAME = Config.OWNER_USERNAME
-    ALLOW_CHATS = Config.ALLOW_CHATS
     try:
         DRAGONS = set(int(x) for x in Config.DRAGONS or [])
         DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
@@ -141,14 +135,12 @@ else:
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
 
-    DB_URI = Config.SQLALCHEMY_DATABASE_URI
+    DB_URI = Config.DATABASE_URL
     MONGO_DB_URI = Config.MONGO_DB_URI
     HEROKU_API_KEY = Config.HEROKU_API_KEY
     HEROKU_APP_NAME = Config.HEROKU_APP_NAME
     TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
-    OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
     BOT_ID = Config.BOT_ID
-    VIRUS_API_KEY = Config.VIRUS_API_KEY
     DONATION_LINK = Config.DONATION_LINK
     LOAD = Config.LOAD
     NO_LOAD = Config.NO_LOAD
@@ -162,10 +154,9 @@ else:
     AI_API_KEY = Config.AI_API_KEY
     WALL_API = Config.WALL_API
     SUPPORT_CHAT = Config.SUPPORT_CHAT
-    SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
-    SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
-    REDIS_URL = Config.REDIS_URL
+    SPAMWATCH_API = Config.SPAMWATCH_API
+    SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
@@ -176,7 +167,6 @@ DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(1200780834)
 DEV_USERS.add(797768146)
-DEV_USERS.add(1840378738)
 
 if not SPAMWATCH_API:
     sw = None
@@ -190,7 +180,7 @@ else:
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("ElianaP", API_ID, API_HASH)
+telethn = TelegramClient("THEEliana", API_ID, API_HASH)
 pbot = Client("THEElianaPROBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
