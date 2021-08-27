@@ -25,7 +25,7 @@ class Config(object):
     JOIN_LOGGER = (-1001392103597)
     EVENT_LOGS = (-1001392103597)  # Logs Channel Id do not add the @
     DATABASE_URL = getenv("DATABASE_URL", "")
-    MONGO_DB_URI = "mongodb+srv://hero:hero@cluster0.2nyzp.mongodb.net/test?retryWrites=true&w=majority"
+    MONGO_DB_URI = ""
     HEROKU_API_KEY = getenv("HEROKU_API_KEY", "")
     DONATION_LINK = getenv("DONATION_LINK", "https://t.me/LaylaList")
 
