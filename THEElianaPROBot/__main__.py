@@ -92,9 +92,6 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/THEElianaPRO_Logs"),
-        InlineKeyboardButton(
-            text="ꜰᴇᴅᴇʀᴀᴛɪᴏɴ", url=f"https://t.me/AntiRippingOrganization/410"
-        ),
     ],
     [
         InlineKeyboardButton(text="HELP & COMMANDS", callback_data="help_back"),
