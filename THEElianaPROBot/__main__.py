@@ -74,15 +74,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello, I'M THE Eliana PRO Bot
-`ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! ʜɪᴛ` /help
-Maintained by @HEROGAMERS1 ❤
+💁‍♀ Hello, I'M THE Eliana PRO Bot
+I'm Here to Help You Manage Your Groups! 
+Maintained by @THEElianaPRO ❤
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/TestofUnlimitedbot?startgroup=true"),
+            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/THEElianaPROBot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Eliana_"),
@@ -94,21 +94,21 @@ buttons = [
         InlineKeyboardButton(text="ʟᴏɢꜱ", url=f"https://t.me/THEElianaPRO_Logs"),
     ],
     [
-        InlineKeyboardButton(text="HELP & COMMANDS", callback_data="help_back"),
+        InlineKeyboardButton(text="ʜᴇʟᴘꜱ & ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hi.. I'M` THE Eliana PRO Bot
-`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
+Hey.. I'M THE Eliana PRO Bot
+Click on The Buttons Below to get Documentation About Specific Modules...
 Powered by :- [Awesome Bots](t.me/THEElianaPRO)"""
 
 Eliana_IMG = "https://telegra.ph/file/d7ba070072629f76a3a1b.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project [Hero](t.me/Eliana2020Eliana) \
- Supporting isnt always financial! [AwesomeSupport](t.me/THEElianaPRO) \
+ You can support the project [Hero247](t.me/Eliana2020Eliana) \
+ Supporting isnt always financial! [Awesome Support](t.me/THEElianaPRO) \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
@@ -365,7 +365,6 @@ def Eliana_about_callback(update, context):
                  \n❍ Awesome Bots @THEElianaPRO
                  \n❍ Support Group @TEP_Discussion
                  \n❍ Assistant @THEElianaPRO.
-                 \nHere is the [💾Repository](https://github.com/THEElianaPRO/THEElianaPROBot).
                  \n\nIf you have any question about THE Eliana PRO Bot, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
