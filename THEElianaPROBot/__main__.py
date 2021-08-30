@@ -350,7 +350,7 @@ def help_button(update, context):
 
 
 @run_async
-def Eliana_about_callback(update, context):
+def eliana_about_callback(update, context):
     query = update.callback_query
     if query.data == "Eliana_":
         query.message.edit_text(
@@ -371,12 +371,12 @@ def Eliana_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="Eliana_back")
+                    InlineKeyboardButton(text="Back", callback_data="eliana_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "Eliana_back":
+    elif query.data == "eliana_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -704,7 +704,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(Eliana_about_callback, pattern=r"Eliana_")
+    about_callback_handler = CallbackQueryHandler(eliana_about_callback, pattern=r"eliana_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
 
     donate_handler = CommandHandler("donate", donate)
